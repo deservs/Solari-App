@@ -5,7 +5,9 @@
     width: 100%;
     height: 10vh;
     padding: 1vh 3vw;
-    background-color: blue;
+    background-color: rgba(10, 10, 10, 0.6);
+    border-bottom: #000 1px solid;
+    backdrop-filter: blur(10px);
 }
 #Logo-Area{
     display: flex;
@@ -21,7 +23,7 @@
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
-    letter-spacing: -.20rem;
+    letter-spacing: -3px;
 }
 #Top-Menu{
     display: none;
@@ -35,6 +37,7 @@
     height: 12vh;
     padding: 1vh .5vw;
     background-color: rgba(18, 16, 16, 0.6);
+    border-top: #000 1px solid;
     backdrop-filter: blur(10px);
 }
 #Bottom-Menu ul{

@@ -1,10 +1,7 @@
-import Header from "../../components/Header/Header"
+import Header from "../../components/Header/Header";
 
-import "./style.css"
-function Home(){
-    return(
-        <Header />
-        
-    )
+import "./style.css";
+function Home() {
+  return <Header />;
 }
-export default Home
+export default Home;
