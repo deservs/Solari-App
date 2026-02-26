@@ -1,9 +1,25 @@
 import { Search, Compass, House, CircleUserRound, Bell } from "lucide-react";
 
+import { useState } from "react";
+
+import ExibirNotificacao from "./notify";
+
 import Logo from "../../assets/Logo_Solari.svg";
 import "./header.css";
 
 function Header() {
+  const [isClosed, setIsClosed] = useState(true);
+  const [mensagens, setMensagens] = useState(["Msg 1", "Msg 2"]);
+
+  const alternar = () => {
+    setIsClosed(!isClosed);
+  };
+
+  const limparNotificacoes = () => {
+    setMensagens([]); 
+    console.log("Mensagens apagadas!");
+  };
+
   return (
     <>
       <div id="Header">
@@ -21,7 +37,7 @@ function Header() {
           </ul>
         </div>
         {/* icone de notificação isolado somente para mobile */}
-        <div id="Mobile-Notifi">
+        <div id="Mobile-Notifi" Close={isClosed} onClick={alternar}>
           <Bell size={32} strokeWidth={2.25} />
         </div>
       </div>
@@ -54,7 +70,9 @@ function Header() {
           </li>
         </ul>
       </div>
+      {!isClosed && <ExibirNotificacao mensagens={mensagens} aoLimpar={limparNotificacoes} />}
     </>
   );
 }
+
 export default Header;

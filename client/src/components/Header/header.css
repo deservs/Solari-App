@@ -1,5 +1,7 @@
 #Header{
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -27,6 +29,10 @@
 }
 #Top-Menu{
     display: none;
+}
+#Mobile-Notifi{
+    border: 1px solid #fff;
+    cursor: pointer;
 }
 #Bottom-Menu{
     display: block;
@@ -57,3 +63,4 @@
 #Bottom-Menu ul li:first-child{
     color: yellow;
 }
+
