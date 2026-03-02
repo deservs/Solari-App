@@ -64,3 +64,8 @@
     color: yellow;
 }
 
+@media (min-width: 1024px) {
+    #Bottom-Menu{
+        display: none;
+    }
+}

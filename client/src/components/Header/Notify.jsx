@@ -12,7 +12,7 @@ function ExibirNotificacao({ mensagens, aoLimpar }) {
       <div id="Notify-Body">
         {/* Aqui usamos o Ternário para decidir o conteúdo interno */}
         {mensagens.length > 0 ? (
-          <>
+          <>  
             <ul>
               {mensagens.map((msg, index) => (
                 <li key={index}>{msg}</li>

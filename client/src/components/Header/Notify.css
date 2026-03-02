@@ -1,11 +1,13 @@
 #Notificacao{
     position: fixed;
-    background-color: #0000ff;
+    background-color: #090909de;
+    backdrop-filter: blur(10px);
     top: 11vh;
     right: 3vw;
     width: 80%;
     border: 1px solid #fff;
     border-radius: 20px;
+    z-index: 1000;
 }
 #Notificacao ul{
     list-style: none;
@@ -24,4 +26,25 @@
 }
 #Notify-Body li:hover{
     backdrop-filter: brightness(.5);
+}
+#Notify-Body p{
+    padding: 2vh 2vw;
+    font-size: 1.25rem;
+}
+#Notify-Body button{
+    margin: 1vh 1vw;
+    border: none;
+    border-radius: 20px;
+    background-color: #1f1f1f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    height: 5vh;
+    width: 10vw;
+    color: yellow;
+    cursor: pointer;
+}
+@media (min-width: 1024px) {
+    #Notificacao{
+        width: 50vw;
+    }
 }
