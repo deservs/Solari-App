@@ -2,7 +2,7 @@ import { Search, Compass, House, CircleUserRound, Bell } from "lucide-react";
 
 import { useState } from "react";
 
-import ExibirNotificacao from "./notify";
+import ExibirNotificacao from "../Notify/Notify";
 
 import Logo from "../../assets/Logo_Solari.svg";
 import "./header.css";
@@ -16,7 +16,7 @@ function Header() {
   };
 
   const limparNotificacoes = () => {
-    setMensagens([]); 
+    setMensagens([]);
     console.log("Mensagens apagadas!");
   };
 
@@ -35,6 +35,12 @@ function Header() {
             <li>Desenhos</li>
             <li>Animes</li>
           </ul>
+          <div id="Top-Search">
+            <input id="search-input" type="text" placeholder="Buscar..." />
+            <label id="search-icon" htmlFor="search-input">
+              <Search strokeWidth={2.25} />
+            </label>
+          </div>
         </div>
         {/* icone de notificação isolado somente para mobile */}
         <div id="Mobile-Notifi" Close={isClosed} onClick={alternar}>
@@ -70,7 +76,12 @@ function Header() {
           </li>
         </ul>
       </div>
-      {!isClosed && <ExibirNotificacao mensagens={mensagens} aoLimpar={limparNotificacoes} />}
+      {!isClosed && (
+        <ExibirNotificacao
+          mensagens={mensagens}
+          aoLimpar={limparNotificacoes}
+        />
+      )}
     </>
   );
 }

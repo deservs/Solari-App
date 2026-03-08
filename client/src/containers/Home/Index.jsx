@@ -38,11 +38,11 @@ const MyTrending = () => {
         navigation={true}
         spaceBetween={20}
         slidesPerView={7.5}
-        allowTouchMove={true}
+        allowTouchMove={false}
         loop={true}
         breakpoints={{
-          320: { slidesPerView: 4.5 },
-          1024: { slidesPerView: 5.5 },
+          320: { slidesPerView: 4.5, allowTouchMove: true },
+          1024: { slidesPerView: 5.5, allowTouchMove: false  },
         }}
       >
         {/* O .map deve envolver o SwiperSlide! */}
