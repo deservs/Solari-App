@@ -2,10 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    /* Impedir que o usuario selecione o texto */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    /* IMpedir que o usuario arraste elementos */
+    -webkit-user-drag: none;
 }
 
 body {
-    background-color: #000;
+    background-color: #111;
     color: #fff;
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }

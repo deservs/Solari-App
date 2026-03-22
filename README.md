@@ -14,4 +14,17 @@ The React Compiler is currently not compatible with SWC. See [this issue](https:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Solari-App" 
+"# Solari-App"
+
+## Neon quick start
+
+1. Acesse a org `org-frosty-dust-30938881` no Neon.
+2. Abra o projeto `tiny-dust-46625263`.
+3. Em **Connection Details**, copie a string de conexão do Postgres (URI completa).
+4. No arquivo `server/.env.local`, preencha `DATABASE_URL=` com essa URI.
+5. Inicie o backend com `npm run start` dentro de `server`.
+6. Teste no navegador ou cliente HTTP:
+   - `GET http://localhost:3000/health`
+   - `GET http://localhost:3000/db/health`
+
+Se `db/health` retornar `ok: true`, a conexão Neon está ativa.

@@ -1,4 +1,4 @@
-#Header{
+#Header {
     display: flex;
     position: sticky;
     top: 0;
@@ -10,29 +10,39 @@
     background-color: rgba(10, 10, 10, 0.6);
     border-bottom: #000 1px solid;
     backdrop-filter: blur(10px);
+    z-index: 100;
 }
-#Logo-Area{
+
+#Logo-Area {
     display: flex;
     align-items: center;
     gap: 1vw;
 }
-#Logo-Area img{
+
+#Logo-Area img {
     width: 8vh;
     height: 8vh;
 }
-#Logo-Area h1{
+
+#Logo-Area h1 {
     font-size: 1.75rem;
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: -3px;
 }
-#Top-Menu{
+
+#Top-Menu {
     display: none;
+    flex-direction: row;
     justify-content: space-around;
-    width: 50%;
+    align-items: center;
+    width: 85%;
+    gap: 2vw;
+    padding: 0 0 0 4vw;
 }
-#Top-Menu ul{
+
+#Top-Menu ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -40,66 +50,101 @@
     list-style: none;
     gap: 2vw;
 }
-#Top-Menu ul li{
-    font-size: 1.2rem;
+
+#Top-Menu ul li {
+    font-size: 1.35rem;
     font-weight: 500;
     color: #777;
     cursor: pointer;
     text-align: center;
 }
 
-#Top-Search{
+#Top-Menu ul li:hover {
+    color: yellow;
+    transition: all 400ms;
+}
+
+#Top-Search {
     display: flex;
-    position: relative;
+    flex-direction: row-reverse;
     align-items: center;
+    justify-content: space-around;
     gap: .5vw;
-}
-
-#Top-Search #search-icon{
-    position: absolute;
-    color: #777;
-    padding: 0 .25vw;
-    top: .15vh;
-    width: 1vw;
-    height: auto;
-}
-
-#Top-Search input{
-    width: 100%;
-    padding-left: 2.45vw;
+    border-radius: 20px;
+    width: 25vw;
+    height: 5vh;
     background-color: #333;
-    height: 4vh;
-    width: 20vw;
+    padding: 0 .5vw;
+    border: 1px solid transparent;
+}
+
+#Top-Search input {
+    background-color: transparent;
+    height: 5vh;
+    width: 85%;
     color: #fff;
     border: none;
     outline: none;
-    border-radius: 20px;
-    font-size: 1rem;
+    font-size: 1.25rem;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-#Top-Search input::placeholder{
+#Top-Search hr {
+    width: 1px;
+    height: 3vh;
+    background-color: #777;
+    border: none;
+}
+
+#Top-Search #label-s-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Top-Search #search-icon {
     color: #777;
-    border-left: 1px solid #777;
-    padding-left: .5vw;
+    width: 22px;
+    height: auto;
 }
 
-#Top-Search input:focus{
-   border: 1px solid yellow;
+#Top-Search:focus-within {
+    border: 1px solid yellow;
 }
 
-#Top-Search input:focus::placeholder{
+#Top-Search input:focus::placeholder {
     color: transparent;
 }
 
-#Top-Search input:focus + #search-icon {
+#Top-Search input:focus+hr {
+    background-color: yellow;
+}
+
+#Top-Search input:focus+hr+#label-s-icon #search-icon {
     color: yellow;
 }
 
-#Mobile-Notifi{
+#Top-Menu #profile-dropdown {
+    display: none;
+    border-radius: 50%;
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+}
+
+#Top-Menu #profile-d-icon {
+    display: flex;
+    width: 45px;
+    height: auto;
+}
+
+#Mobile-Notifi {
     border: 1px solid #fff;
     cursor: pointer;
 }
-#Bottom-Menu{
+
+#Bottom-Menu {
     display: block;
     position: fixed;
     bottom: 0;
@@ -110,30 +155,42 @@
     background-color: rgba(18, 16, 16, 0.6);
     border-top: #000 1px solid;
     backdrop-filter: blur(10px);
+    z-index: 100;
 }
-#Bottom-Menu ul{
+
+#Bottom-Menu ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
     list-style: none;
 }
-#Bottom-Menu ul li{
+
+#Bottom-Menu ul li {
     font-size: 1.2rem;
     font-weight: 500;
     color: #777;
     cursor: pointer;
     text-align: center;
 }
-#Bottom-Menu ul li:first-child{
+
+#Bottom-Menu ul li:first-child {
     color: yellow;
 }
 
 @media (min-width: 1024px) {
-    #Bottom-Menu{
+    #Bottom-Menu {
         display: none;
     }
-    #Top-Menu{
+
+    #Mobile-Notifi {
+        display: none;
+    }
+
+    #Top-Menu {
+        display: flex;
+    }
+    #Top-Menu #profile-dropdown {
         display: flex;
     }
 }

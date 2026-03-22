@@ -1,3 +1,242 @@
+/* Para a lista de filmes e séries */
+#media-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* pra os filmes e série no carrossel */
 .movie-poster {
     width: 100%;
+}
+
+/* Container principal do conteudo destacado */
+#first-movie-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    cursor: default;
+}
+
+/* Container do conteudo */
+#first-movie-container #movie-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: end;
+    filter: blur(2px) brightness(0.75);
+    z-index: 1;
+}
+
+/* Imagem do conteudo */
+#first-movie-container img {
+    display: block;
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    object-position: top;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+/* Container com as informações do conteudo */
+#first-movie-container #movie-info {
+    padding: 50px;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Conteiner com as principais informações do conteudo */
+#first-movie-container #movie-info #extra-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Tipo do conteudo: série ou filme */
+#first-movie-container #movie-info #movie-type {
+    border: 1px solid rgba(255, 217, 0);
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 217, 0, 0.3);
+    color: rgba(255, 217, 0);
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+/* Container com os gêneros do conteudo */
+#first-movie-container #movie-info #movie-genres {
+    display: flex;
+    list-style: none;
+}
+
+#first-movie-container #movie-info #movie-genres div {
+    display: flex;
+    align-items: center;
+}
+
+#first-movie-container #movie-info #movie-genres #ponto {
+    height: 30px;
+    width: auto;
+}
+
+/* Título do conteúdo */
+#first-movie-container h1 {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    white-space: wrap;
+    letter-spacing: -3px;
+    line-height: .95;
+}
+
+#first-movie-container .yellow-part {
+    display: inline-block;
+    font-weight: bold;
+    color: rgba(255, 217, 0);
+    font-style: italic;
+}
+
+/* Sinopse do conteúdo */
+#Movie-Sinopse {
+    position: relative;
+    z-index: 1;
+    font-size: 1.25rem;
+    width: 50%;
+    height: fit-content;
+    max-height: 125px;
+    color: #777;
+    font-weight: normal;
+
+    /* Ativa o corte em múltiplas linhas */
+    line-clamp: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#movie-Buttons {
+    display: flex;
+    gap: 20px;
+}
+
+#movie-Buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+#movie-Buttons button#Watch-Now {
+    background-color: rgba(255, 217, 0);
+    color: #000;
+}
+
+#movie-Buttons button#Watch-Now:hover {
+    background-color: rgba(255, 255, 255, .9);
+    scale: 1.05;
+}
+
+#movie-Buttons button#Watch-Now>svg {
+    color: #000;
+    fill: #000;
+}
+
+#movie-Buttons button#More-Info {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#movie-Buttons button#More-Info:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    scale: 1.05;
+}
+
+/* Container do carrossel */
+.slider-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 50;
+    padding: 0 1.5vw;
+    text-align: start;
+}
+
+.slider-wrapper{
+    position: relative;
+    z-index: 50; 
+    display: flex; 
+    align-items: center;
+    padding: 0 1vw;
+    width: 99%;
+}
+
+#movie-card {
+    padding: 0 1vw;
+}
+
+.trending-navigation {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    z-index: 2;
+    width: 100%;
+    padding: 0 1vw;
+    transition: visibility .2s ease-in-out;
+}
+
+.trending-navigation button {
+    background-color: #00000080;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #777;
+    backdrop-filter: blur(15px);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.trending-navigation button:hover {
+    background-color: rgba(255, 217, 0);
+    border-color: rgba(255, 217, 0);
+    color: #000;
+}
+
+.trending-navigation button svg {
+    width: 32px;
+    height: 32px;
+}
+.slider-wrapper:hover .trending-navigation {
+    visibility: visible;
+    transition: visibility .2s ease-in-out;
+}
+@media (max-width: 1024px) {
+    .trending-navigation {
+        visibility: visible;
+    }
 }

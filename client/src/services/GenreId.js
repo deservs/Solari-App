@@ -1,0 +1,31 @@
+export const TvGenres = {
+  10759: "Ação e Aventura",
+  10762: "Kids",
+  10763: "Noticiário",
+  10764: "Reality Show",
+  10765: "Ficção Científica e Fantasia",
+  10766: "Novela",
+  10767: "Talk Show",
+  10768: "Guerra e Política",
+};
+export const Genres = {
+  28: "Ação",
+  12: "Aventura",
+  16: "Animação",
+  35: "Comédia",
+  80: "Crime",
+  99: "Documentário",
+  18: "Drama",
+  10751: "Família",
+  14: "Fantasia",
+  36: "História",
+  27: "Terror",
+  10402: "Música",
+  9648: "Mistério",
+  10749: "Romance",
+  878: "Ficção Científica",
+  10770: "Cinema TV",
+  53: "Suspense",
+  10752: "Guerra",
+  37: "Faroeste"
+};

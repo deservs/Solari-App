@@ -37,9 +37,13 @@ function Header() {
           </ul>
           <div id="Top-Search">
             <input id="search-input" type="text" placeholder="Buscar..." />
-            <label id="search-icon" htmlFor="search-input">
-              <Search strokeWidth={2.25} />
+            <hr />
+            <label id="label-s-icon" htmlFor="search-input">
+              <Search id="search-icon" strokeWidth={2.25} />
             </label>
+          </div>
+          <div id="profile-dropdown">
+            <CircleUserRound id="profile-d-icon" strokeWidth={2.25}  />
           </div>
         </div>
         {/* icone de notificação isolado somente para mobile */}
